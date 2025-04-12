@@ -38,16 +38,82 @@
    * Hide mobile nav on same-page/hash links
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
+    // Skip dropdown toggles to prevent immediate closing
+    if (navmenu.classList.contains('dropdown-toggle')) return;
 
+    // We only want to close the mobile nav when clicking regular links, not dropdown items
+    if (!navmenu.classList.contains('dropdown-item')) {
+      navmenu.addEventListener('click', () => {
+        if (document.querySelector('.mobile-nav-active')) {
+          mobileNavToogle();
+        }
+      });
+    }
   });
 
   /**
-   * Toggle mobile nav dropdowns
+   * Handle dropdown toggles in mobile view
+   */
+  document.querySelectorAll('.nav-link.dropdown-toggle').forEach(dropdownToggle => {
+    dropdownToggle.addEventListener('click', function (e) {
+      // Only handle clicks in mobile view
+      if (window.innerWidth < 1200) {
+        e.preventDefault();
+        const parent = this.closest('.nav-item.dropdown');
+        const dropdownMenu = parent.querySelector('.dropdown-menu');
+
+        // Close all other open dropdowns first
+        document.querySelectorAll('.nav-item.dropdown.show').forEach(dropdown => {
+          if (dropdown !== parent) {
+            dropdown.classList.remove('show');
+            dropdown.querySelector('.dropdown-menu').classList.remove('show');
+          }
+        });
+
+        // Toggle dropdown visibility
+        dropdownMenu.classList.toggle('show');
+        parent.classList.toggle('show');
+
+        // Stop event propagation to prevent other handlers
+        e.stopPropagation();
+      }
+    });
+  });
+
+  /**
+   * Close dropdowns when clicking outside or on other menu items
+   */
+  document.addEventListener('click', function (e) {
+    if (window.innerWidth < 1200) {
+      // Only process if we're not clicking on a dropdown toggle
+      if (!e.target.classList.contains('dropdown-toggle') &&
+        !e.target.closest('.dropdown-toggle')) {
+        const dropdowns = document.querySelectorAll('.nav-item.dropdown.show');
+        dropdowns.forEach(dropdown => {
+          // If click is outside the dropdown
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+            dropdown.querySelector('.dropdown-menu').classList.remove('show');
+          }
+        });
+      }
+    }
+  });
+
+  /**
+   * Reset dropdown state when window is resized past mobile breakpoint
+   */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 1200) {
+      document.querySelectorAll('.nav-item.dropdown.show').forEach(dropdown => {
+        dropdown.classList.remove('show');
+        dropdown.querySelector('.dropdown-menu').classList.remove('show');
+      });
+    }
+  });
+
+  /**
+   * Toggle mobile nav dropdowns (for existing toggle functionality)
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function (e) {
@@ -78,13 +144,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -163,7 +231,6 @@
         }
       }, false);
     });
-
   });
 
   /**
@@ -212,8 +279,38 @@
       }
     })
   }
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-})();
+  /**
+   * Service details sidebar navigation
+   */
+  document.querySelectorAll('.services-list a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
 
+        // Remove active class from all links
+        document.querySelectorAll('.services-list a').forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Add active class to clicked link
+        this.classList.add('active');
+
+        // Scroll to target section
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          const headerHeight = document.querySelector('#header').offsetHeight;
+          window.scrollTo({
+            top: targetSection.offsetTop - headerHeight - 20,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+})();

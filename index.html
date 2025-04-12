@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Baynur Cleaning Services Ltd</title>
+  <title>Baynur Group Ltd</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -51,9 +51,18 @@
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cleaning-services.html">Cleaning Services</a></li>
+              <li><a class="dropdown-item" href="logistics-services.html">Transport & Logistics</a></li>
+              <li><a class="dropdown-item" href="real-estate-services.html">Real Estate & Short-Lets</a></li>
+            </ul>
+          </li>
           <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <!---<li><a href="#portfolio">Portfolio</a></li>--->
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -66,29 +75,55 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Carousel -->
     <section id="hero" class="hero section">
-
-      <!---<img src="assets/img/hero-bg-abstract.jpg" alt="" data-aos="fade-in" class="">--->
-      <img src="assets/img/hero_baynur_2.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-out">
-          <div class="col-xl-7 col-lg-9 text-center">
-            <h1>Your Trusted Partner For A Cleaner, Healthier Space</h1>
-            <p>
-              We specialise in providing affordable, high-quality, reliable and professional cleaning services for homes, offices, and businesses. whether you need a one-time deep clean, regular upkeep, or post construction cleaning , we're here to deliver exceptional results everytime.
-            </p>
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/hero_baynur_2.jpg" class="d-block w-100" alt="Cleaning Services">
+            <div class="carousel-caption">
+              <h1>Commercial & Residential Cleaning Services</h1>
+              <p>Tailored cleaning solutions for offices, homes, and industrial spaces, including deep cleans and regular maintenance.</p>
+              <a href="#contact" class="btn-get-started">Book Now</a>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="assets/img/cargo_transport_1.jpg" class="d-block w-100" alt="Cargo Transport & Logistics">
+            <div class="carousel-caption">
+              <h1>UK & International Cargo Transport & Logistics</h1>
+              <p>End-to-end cargo and logistics solutions across the UK and internationally — with specialist services to Nigeria and other African countries.</p>
+              <a href="#services" class="btn-get-started">Learn More</a>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="assets/img/real_estate_1.jpg" class="d-block w-100" alt="Real Estate Management">
+            <div class="carousel-caption">
+              <h1>Real Estate & Short-Let Management</h1>
+              <p>Property management services for landlords, investors, and homeowners — including lettings, property sourcing, and short-let hosting solutions.</p>
+              <a href="#contact" class="btn-get-started">Get Started</a>
+            </div>
           </div>
         </div>
-        <div class="text-center" data-aos="zoom-out" data-aos-delay="100">
-          <a href="#contact" class="btn-get-started">Book Us</a>
-        </div>
-
-      
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
     </section><!-- /Hero Section -->
+
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -97,26 +132,22 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>About Us<br></h2>
         <p>
-          At Baynur, we take pride in delivering top-tier specialised cleaning services tailored to meet your needs.
+          At Baynur, we take pride in delivering top-tier specialised services tailored to meet your diverse needs.
         </p>
       </div><!-- End Section Title -->
-
+      
       <div class="container">
           <div data-aos="fade-up" data-aos-delay="200">
             <p class="text-center">
                 Based in the heart of Aberdeen, Scotland, our team is committed to excellence, reliability, and meticulous attention to detail.
-                Established on 11 December 2024, we are a private limited company dedicated to setting new standards in the cleaning industry. Whether it’s deep cleaning, sanitation, or customised solutions for homes and businesses, we go above and beyond to ensure a spotless, refreshed environment.
-                Located at 56 Whitehouse Street, Aberdeen, AB10 1QH, we bring professionalism and precision to every job. Our goal is to create cleaner, healthier spaces—because a clean environment is a happy one.
+                Established on 11 December 2024, we are a private limited company dedicated to setting new standards across multiple industries. From cleaning and logistics to real estate management, we go above and beyond to ensure exceptional service delivery.
+                Located at 56 Whitehouse Street, Aberdeen, AB10 1QH, we bring professionalism and precision to every job. Our goal is to exceed expectations and create value for our clients—because your satisfaction is our priority.
                 Give us a chance and we promise you will be surprised by the quality of our services.     
             </p>
             <p class="text-center">
-              Let us handle the mess, so you can focus on what matters most!  
+              Let us handle the complexities, so you can focus on what matters most!  
             </p>
       </div>
-
-      
-      </div>
-
     </section><!-- /About Section -->
 
     <!-- Stats Section -->
@@ -286,132 +317,80 @@
 
     </section><!-- /Testimonials Section -->
 
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
+<!-- Services Section -->
+<section id="services" class="services section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>
-          We offer a wide range of services to meet your cleaning needs.
-        </p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>
+      Explore our comprehensive range of professional services designed to meet your needs.
+    </p>
+  </div><!-- End Section Title -->
 
-      <div class="container">
+  <div class="container">
+    <div class="row gy-4">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <!-- Service Image -->
-              <div class="service-image">
-                <img src="assets/img/officeCleaning.jpg" alt="Office Cleaning" class="img-fluid rounded">
-              </div>
+      <!-- Cleaning Services -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <!-- Service Image -->
+          <div class="service-image">
+            <img src="assets/img/cleaning-services.jpg" alt="Cleaning Services" class="img-fluid rounded">
+          </div>
           
-              <!-- Service Content -->
-              <div class="service-content p-3 text-center">
-                <h3>Office Cleaning</h3>
-                <p>
-                  We provide expert office cleaning services to ensure a spotless and hygienic workspace. 
-                  Our trained professionals use eco-friendly products for a healthier environment.
-                </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <!-- Service Image -->
-              <div class="service-image">
-                <img src="assets/img/carpetCleaning.jpg" alt="Carpet Cleaning" class="img-fluid rounded">
-              </div>
-          
-              <!-- Service Content -->
-              <div class="service-content p-3 text-center">
-                <h3>Carpet Cleaning</h3>
-                <p>
-                  Revitalize your carpets with our deep-cleaning services! We remove dirt, stains, and allergens using eco-friendly products, leaving your carpets fresh, spotless, and looking like new.                
-                </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <!-- Service Image -->
-              <div class="service-image">
-                <img src="assets/img/eotCleaning.jpg" alt="Office Cleaning" class="img-fluid rounded">
-              </div>
-          
-              <!-- Service Content -->
-              <div class="service-content p-3 text-center">
-                <h3>End of Tenancy Cleaning</h3>
-                <p>
-                  Ensure a hassle-free move with our thorough end-of-tenancy cleaning. We deep-clean every corner, leaving the property spotless and ready for the next tenant or final inspection.
-                </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <!-- Service Image -->
-              <div class="service-image">
-                <img src="assets/img/moveInCleaning.jpg" alt="Move-In Cleaning" class="img-fluid rounded">
-              </div>
-          
-              <!-- Service Content -->
-              <div class="service-content p-3 text-center">
-                <h3>Move-In Cleaning</h3>
-                <p>
-                  Start fresh in your new home with our meticulous move-in cleaning service. We sanitize and deep-clean every space, ensuring a spotless and welcoming environment for you and your family.                </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <!-- Service Image -->
-              <div class="service-image">
-                <img src="assets/img/ovenCleaning.jpg" alt="Oven Cleaning" class="img-fluid rounded">
-              </div>
-          
-              <!-- Service Content -->
-              <div class="service-content p-3 text-center">
-                <h3>Oven Cleaning</h3>
-                <p>
-                  Say goodbye to grease and grime with our professional oven cleaning service. We remove stubborn stains and burnt residues, leaving your oven sparkling clean and ready for your next meal.
-                </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <!-- Service Image -->
-              <div class="service-image">
-                <img src="assets/img/deepCleaning.jpg" alt="Deep Cleaning" class="img-fluid rounded">
-              </div>
-          
-              <!-- Service Content -->
-              <div class="service-content p-3 text-center">
-                <h3>Deep Cleaning</h3>
-                <p>
-                  Our deep cleaning service goes beyond the surface, tackling hidden dirt, grime, and bacteria. From floors to ceilings, we leave every inch of your space fresh, sanitized, and looking its best.                </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          
-
-          
-          
+          <!-- Service Content -->
+          <div class="service-content p-3 text-center">
+            <h3>Cleaning Services</h3>
+            <p>
+              Professional cleaning solutions for homes, offices, and commercial spaces. From routine maintenance to deep cleaning, we ensure spotless, healthy environments.
+            </p>
+            <a href="cleaning-services.html" class="btn btn-sm btn-custom-blue mt-3">Learn More</a>
+          </div>
         </div>
+      </div><!-- End Service Item -->
+      
+      <!-- Cargo & Logistics -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <!-- Service Image -->
+          <div class="service-image">
+            <img src="assets/img/cargo-transport.jpg" alt="Cargo & Logistics" class="img-fluid rounded">
+          </div>
+          
+          <!-- Service Content -->
+          <div class="service-content p-3 text-center">
+            <h3>Transport & Logistics</h3>
+            <p>
+              End-to-end cargo and logistics solutions across the UK and internationally. Specialized services to Nigeria and other African countries with reliable freight handling.
+            </p>
+            <a href="logistics-services.html" class="btn btn-sm btn-custom-blue mt-3" >Learn More</a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+      
+      <!-- Real Estate & Short-Lets -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <!-- Service Image -->
+          <div class="service-image">
+            <img src="assets/img/real-estate.jpg" alt="Real Estate & Short-Lets" class="img-fluid rounded">
+          </div>
+          
+          <!-- Service Content -->
+          <div class="service-content p-3 text-center">
+            <h3>Real Estate & Short-Lets</h3>
+            <p>
+              Comprehensive property management services for landlords and investors. We handle everything from property lettings and maintenance to Airbnb and short-term rental management.
+            </p>
+            <a href="real-estate-services.html" class="btn btn-sm btn-custom-blue mt-3">Learn More</a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
 
-      </div>
-
-    </section><!-- /Services Section -->
+    </div>
+  </div>
+</section><!-- /Services Section -->
 
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section accent-background">
@@ -430,123 +409,7 @@
 
     </section><!-- /Call To Action Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>
-          Check out some of our recent projects. We take pride in delivering exceptional results every time.
-        </p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Bathrooms</li>
-            <li data-filter=".filter-product">Kitchen</li>
-            <li data-filter=".filter-branding">Floors</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <!---First Row---->
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/kitchen-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 1</h4>
-                <p>A thoroughly scrubbed oven tray</p>
-                <a href="assets/img/masonry-portfolio/kitchen-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/bathroom-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 2</h4>
-                <p>Squeaky clean bathroom wall</p>
-                <a href="assets/img/masonry-portfolio/bathroom-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/floor-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 3</h4>
-                <p>A thoroughly mopped floor</p>
-                <a href="assets/img/masonry-portfolio/floor-1.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <!---Second Row---->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/kitchen-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 4</h4>
-                <p>A cleaned dish rack</p>
-                <a href="assets/img/masonry-portfolio/kitchen-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/bathroom-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 6</h4>
-                <p>Squeaky clean bathroom floor and WC</p>
-                <a href="assets/img/masonry-portfolio/bathroom-2.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/floor-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 5</h4>
-                <p>A deep cleaned bedroom carpet</p>
-                <a href="assets/img/masonry-portfolio/floor-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <!---Third Row---->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/kitchen-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 7</h4>
-                <p>A freshly cleaned microwave and cupboard</p>
-                <a href="assets/img/masonry-portfolio/kitchen-3.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/bathroom-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 8</h4>
-                <p>Freshly wiped bathtub</p>
-                <a href="assets/img/masonry-portfolio/bathroom-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/floor-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Exhibit 9</h4>
-                <p>A thoroughly hoovered floor</p>
-                <a href="assets/img/masonry-portfolio/floor-3.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
+   
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
@@ -659,16 +522,19 @@
             <li><a href="#about">About us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <!---<li><a href="#portfolio">Portfolio</a></li>--->
           </ul>
         </div>
+
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li>Office Cleaning</li>
-            <li>Move-In Cleaning</li>
-            <li>End of Tenancy Cleaning</li>
+            <li><a >81210 – Cleaning</a></li>
+            <li><a >49410 – Road Cargo</a></li>
+            <li><a >68310 – Real Estate</a></li>
+            <li><a >52290 – Support Cargo</a></li>
+            (good general coverage for other cargo work)
           </ul>
         </div>
 
